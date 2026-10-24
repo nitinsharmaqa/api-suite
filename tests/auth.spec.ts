@@ -1,10 +1,10 @@
-import { test, expect } from '@playwrighttest';
+import { test, expect } from '@playwright/test';
 
-test('auth returns a token', async ({ request }) = {
-  const response = await request.post('httpsrestful-booker.herokuapp.comauth', {
-    data {
-      username 'admin',
-      password 'password123',
+test('auth returns a token', async ({ request }) => {
+  const response = await request.post('https://restful-booker.herokuapp.com/auth', {
+    data: {
+      username: 'admin',
+      password: 'password123',
     },
   });
 
