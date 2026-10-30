@@ -22,3 +22,10 @@ docker run --rm api-suite
 ```bash
 docker build -t api-suite .
 docker run --rm api-suite
+
+## Traces
+
+A failed retry writes a trace. Open it with:
+
+```bash
+npx playwright show-trace test-results/<folder>/trace.zip
